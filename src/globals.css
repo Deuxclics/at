@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Configuration du thème si nécessaire */
+@theme {
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter);
+}
+
+/* 1. Fluidité du défilement */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. Sélection de texte (En v4, on utilise les variables CSS de Tailwind) */
+::selection {
+  background-color: var(--color-amber-100);
+  color: var(--color-amber-900);
+}
+
+/* 3. Style global du body */
+body {
+  @apply antialiased;
+  background-color: white;
+  color: black;
+}
+
+/* 4. Barre de défilement */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9fafb; /* gray-50 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db; /* gray-300 */
+  border-radius: 9999px;
+  border: 2px solid white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706; /* amber-600 */
+}
